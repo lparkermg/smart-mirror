@@ -7,7 +7,6 @@ namespace weatherprocessor
 {
 	public class Weather
 	{
-		private WeatherObject _currentWeather;
 		private string _currentWeatherUrl = "http://api.openweathermap.org/data/2.5/weather?id=";
 		private string _currentWeatherFile = "..\\CurrentWeather.json";
 
@@ -15,18 +14,12 @@ namespace weatherprocessor
 		{
 		}
 
-		public string DownloadCurrentWeather(string cityId)
+		public void DownloadCurrentWeather(string cityId)
 		{
 			using (var webClient = new WebClient())
 			{
 				SaveToJson(new WeatherObject(webClient.DownloadString (_currentWeatherUrl + cityId)));
 			}
-		}
-
-		public string DownloadFivedayWeather(string cityId)
-		{
-			//Download the Fiveday weather forecast using the City ID. Future Release Stuff...
-
 		}
 			
 		private void SaveToJson(WeatherObject currentWeather)
