@@ -18,7 +18,7 @@ namespace weatherprocessor
 		{
 			using (var webClient = new WebClient())
 			{
-				SaveToJson(new WeatherObject(webClient.DownloadString (_currentWeatherUrl + cityId)));
+				SaveToJson(new WeatherObject(webClient.DownloadString (_currentWeatherUrl + cityId + "&units=metric")));
 			}
 		}
 			
