@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace weatherprocessor
 {
@@ -20,6 +21,20 @@ namespace weatherprocessor
 		public WeatherObject (string weatherJson)
 		{
 			//Process the weather json into the object.
+			var weatherStuff = JsonConvert.DeserializeObject<dynamic>(weatherJson);
+
+			CityId = weatherStuff.id;
+			CityName = weatherStuff.name;
+			Country = weatherStuff.sys.country;
+			WeatherId = weatherStuff.weather [0].id;
+			WeatherMain = weatherStuff.weather [0].main;
+			WeatherDescription = weatherStuff.weather [0].description;
+			CurrentTemp = weatherStuff.main.temp;
+			MinTemp = weatherStuff.main.temp_min;
+			MaxTemp = weatherStuff.main.temp_max;
+			Humidity = weatherStuff.main.humidity;
+			WindSpeed = weatherStuff.wind.speed;
+			WindDirection = weatherStuff.wind.deg;
 		}
 	}
 }
