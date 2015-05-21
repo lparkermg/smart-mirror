@@ -3,12 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "weather-processor", "weather-processor\weather-processor.csproj", "{99DFDFE2-652D-4906-97A4-32346B962172}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web-api", "web-api\web-api.csproj", "{004A1099-6E3B-4E8E-AC75-3C0A4BF1A212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "logic", "logic\logic.csproj", "{4561D7ED-A14D-4A46-8ABF-71CAD85F1114}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{004A1099-6E3B-4E8E-AC75-3C0A4BF1A212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004A1099-6E3B-4E8E-AC75-3C0A4BF1A212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004A1099-6E3B-4E8E-AC75-3C0A4BF1A212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004A1099-6E3B-4E8E-AC75-3C0A4BF1A212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4561D7ED-A14D-4A46-8ABF-71CAD85F1114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4561D7ED-A14D-4A46-8ABF-71CAD85F1114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4561D7ED-A14D-4A46-8ABF-71CAD85F1114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4561D7ED-A14D-4A46-8ABF-71CAD85F1114}.Release|Any CPU.Build.0 = Release|Any CPU
 		{99DFDFE2-652D-4906-97A4-32346B962172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{99DFDFE2-652D-4906-97A4-32346B962172}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99DFDFE2-652D-4906-97A4-32346B962172}.Release|Any CPU.ActiveCfg = Release|Any CPU

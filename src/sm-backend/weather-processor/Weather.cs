@@ -8,7 +8,7 @@ namespace weatherprocessor
 	public class Weather
 	{
 		private string _currentWeatherUrl = "http://api.openweathermap.org/data/2.5/weather?id=";
-		private string _currentWeatherFile = "..\\CurrentWeather.json";
+		private string _currentWeatherFile = "CurrentWeather.json";
 
 		public Weather ()
 		{
