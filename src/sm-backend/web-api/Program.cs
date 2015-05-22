@@ -1,5 +1,5 @@
 ﻿using System;
-using logic;
+using Nancy.Hosting.Self;
 
 namespace webapi
 {
@@ -7,9 +7,11 @@ namespace webapi
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Setting Up Logic Base.");
-			var logicStuff = new LogicSystem ();
-			Console.ReadLine ();
+			using (var host = new NancyHost (new Uri ("http://localhost:9998/"))) {
+				Console.WriteLine ("Setting Up Nancy Host.");
+				host.Start ();
+				Console.ReadLine ();
+			}
 		}
 	}
 }

@@ -29,16 +29,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="Nancy">
+      <HintPath>..\packages\Nancy.1.2.0\lib\net40\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self">
+      <HintPath>..\packages\Nancy.Hosting.Self.1.2.0\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MessageApi.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\logic\logic.csproj">
-      <Project>{4561D7ED-A14D-4A46-8ABF-71CAD85F1114}</Project>
-      <Name>logic</Name>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\json-message-storage\json-message-storage.csproj">
+      <Project>{4AB7FF27-564C-4EE0-9100-E98DA39E1870}</Project>
+      <Name>json-message-storage</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
