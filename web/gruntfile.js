@@ -9,18 +9,13 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    src: 'components/**/*.js',
+                    src: 'js/*.js',
                     dest: 'dist/'
-                },
-                {
-                    expand: false,
-                    src: 'main.js',
-                    dest: 'dist/main.js'
                 }]
             }
         },
         jshint: {
-            files: ['Gruntfile.js', 'components/**/*.js', 'main.js'],
+            files: ['Gruntfile.js', 'js/*.js', 'main.js'],
             options: {
                 globals: {
                     define: true,
@@ -35,8 +30,8 @@ module.exports = function(grunt) {
             css: {
                 files: [{ expand:true, src: ['styles/*.css'], dest: 'dist/' }]
             },
-            components: {
-                files: [{ expand: true, src: ['components/**/*.html'], dest: 'dist/'}]
+            js: {
+                files: [{ expand: true, src: ['js/*.html'], dest: 'dist/'}]
             },
             libs: {
                 files: [{ expand:true, src: ['libs/*.js'], dest: 'dist/' }]
@@ -66,16 +61,16 @@ module.exports = function(grunt) {
         },
         watch: {
             js: {
-                files: ['components/**/*.js', 'main.js', 'conf.js' ],
-                tasks: [ 'jshint', 'uglify', 'copy:libs' ]
+                files: ['js/*.js'],
+                tasks: [ 'jshint', 'uglify', 'copy:libs', 'copy:js' ]
             },
             styles: {
                 files: 'styles/**/*.css',
                 tasks: [ 'copy:css' ]
             },
             html: {
-                files: ['*.html', 'components/**/*.html'],
-                tasks: [ 'copy:html', 'copy:components' ]
+                files: ['*.html'],
+                tasks: [ 'copy:html']
             },
             reload: {
                 files: 'dist/**/*',

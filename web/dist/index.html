@@ -3,20 +3,29 @@
 	<head>
 		<title>Smart Mirror Project...</title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/weather-icons.css">
+
+		<script src="libs/jquery-2.1.4.min.js"></script>
+		<script src="libs/moment-with-locales.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/main.js"></script>
 	</head>
 	<body>
 		<!--Time and Date up here.-->
-		<div class="top left light xdimmed">
-			Time and Date
+		<div class="top left light">
+			<div class="date small dimmed"></div>
+			<div class="time"></div>
 		</div>
 		<!--Current Weather here-->	
-		<div class="top right light xdimmed">
-			Current Weather
+		<div class="top right light">
+			<div class="location"></div>
+			<div class="windsun small dimmed"></div>
+			<div class="temp"></div>
 		</div>
 
 		<!--Startup Message and Compliments.-->
-		<div class="centre-hor centre-ver light dimmed">
-			<p>Welcome Luke.</p>
+		<div class="centre-hor lower-third light">
+			<div class="message"></div>
 		</div>
 
 		<!--Something other than credits needs to go here.-->
@@ -24,6 +33,5 @@
 		<div class="bottom centre-hor light xdimmed">
 			Made by Luke Parker.
 		</div>
-
 	</body>
 </html>
