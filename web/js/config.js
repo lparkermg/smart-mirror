@@ -25,7 +25,7 @@ var morning = [ 'Good morning, ' + name + '.', 'Have a good day!', 'Did you slee
 
 var afternoon = ['Hello, ' + name + '.', 'Having a good day?', 'It\'s the afternoon!'];
 
-var evening = ['Good evening, ' + name + '.', 'I Love Laura <3'];
+var evening = ['Good evening, ' + name + '.'];
 
 //Reddit Stuff
 var redditPage = "gamedev";
