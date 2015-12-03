@@ -142,7 +142,7 @@ jQuery(document).ready(function($) {
 				recentStuff += '<div class="light xsmall">' + tempThings.substring(0,length) + '...</div>';
 			}
 
-			console.log(recentStuff);
+			//console.log(recentStuff);
 
 			$('.reddit-feed').updateWithText(recentStuff,2000);
 		});

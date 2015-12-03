@@ -21,11 +21,11 @@ var welcomeMessage = ['Welcome to the Smart Mirror UI, ' + name + '.'];
 var goodbyeMessage = ['See you later, ' + name + '.'];
 var goodnightMessage = ['Goodnight, ' + name + '.'];
 
-var morning = [ 'Good morning, ' + name + '.', 'Have a good day!', 'Did you sleep well?', 'Your name is ' + name + ', right?'];
+var morning = [ 'Good morning, ' + name + '.', 'Here\'s to a good day!', 'Did you sleep well?', 'Your name is ' + name + ', right?'];
 
 var afternoon = ['Hello, ' + name + '.', 'Having a good day?', 'It\'s the afternoon!'];
 
-var evening = ['Good evening, ' + name + '.', 'I Love Laura <3'];
+var evening = ['Good evening, ' + name + '.'];
 
 //Reddit Stuff
 var redditPage = "gamedev";
