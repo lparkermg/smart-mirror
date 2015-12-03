@@ -8,7 +8,7 @@ var weatherParams = {
 	'id':'2653144',
 	'units':'metric',
 	'lang':lang,
-	'appid':''
+	'APPID':'AddTheIDHere'
 };
 
 //Compliments and Messages

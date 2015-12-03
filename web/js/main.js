@@ -25,6 +25,7 @@ jQuery(document).ready(function($) {
 
 	var lastCompliment;
 	var compliment;
+	var timeout = 10000;
 	var doneWelcome = false;
 	moment.locale(lang);
 
@@ -75,10 +76,9 @@ jQuery(document).ready(function($) {
 			$('.location').updateWithText(locationString,1000);
 
 			var wind = roundVal(json.wind.speed / 1.609344);
-			console.log(json);
 			var iconClass = iconTable[json.weather[0].icon];
 			var icon = $('<span/>').addClass('icon').addClass('xdimmed').addClass('wi').addClass(iconClass);
-			$('.temp').updateWithText(icon.outerHTML() + temp + '&deg', 1000);
+			$('.temp').updateWithText(icon.outerHTML() + temp + '&deg', 2000);
 
 			var now = new Date();
 			var sunrise = new Date(json.sys.sunrise*1000).toTimeString().substring(0,5);
@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
 				sunString = '<span class="wi wi-sunset dimmed"></span> ' + sunset;
 			}
 
-			$('.windsun').updateWithText(windString + ' ' + sunString, 1000);
+			$('.windsun').updateWithText(windString + ' ' + sunString, 1500);
 		});
 
 		setTimeout(function() {
@@ -99,10 +99,10 @@ jQuery(document).ready(function($) {
 
 	})();
 
-	(function updateCompliment()
+	(function updateCompliment(something)
 	{
 
-		while(compliment == lastCompliment){	
+		while(compliment == lastCompliment){
 			var date = new Date();
 			var hour = date.getHours();
 
@@ -113,20 +113,42 @@ jQuery(document).ready(function($) {
 			compliment = Math.floor(Math.random()*compliments.length);
 
 		}
-
 		if(doneWelcome === true){
 			$('.message').updateWithText(compliments[compliment],4000);
+			timeout = (60000 * 10);
 		}
 		else{
 			$('.message').updateWithText(welcomeMessage[0],4000);
 			doneWelcome = true;
+
 		}
-		lastComliment = compliment;
+		lastCompliment = compliment;
 
 		setTimeout(function() {
 			updateCompliment(true);
-		},30000);
+		},timeout);
+	})();
+
+	(function updateRedditFeed(somewth)
+	{
+		$('.reddit-title').updateWithText("Latest Posts from r/" + redditPage,1000);
+		$.getJSON('http://www.reddit.com/r/' + redditPage + '/new.json', function(json){
+			var recentStuff = "";
+			var tempThings = "";
+			var length = 75;
+
+			for (i = 0; i < 5; i++){
+				tempThings = json.data.children[i].data.title;
+				recentStuff += '<div class="light xsmall">' + tempThings.substring(0,length) + '...</div>';
+			}
+
+			console.log(recentStuff);
+
+			$('.reddit-feed').updateWithText(recentStuff,2000);
+		});
+
+		setTimeout(function() {
+			updateRedditFeed();
+		},10000);
 	})();
 });
-
-
