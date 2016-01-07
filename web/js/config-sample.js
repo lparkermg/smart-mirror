@@ -14,9 +14,11 @@ var weatherParams = {
 //Compliments and Messages
 
 //Name.
-var name = 'Luke';
+var name = 'Name Here';
 
 //Messages. Switch to json format of messages.
+var jsonLocation = '';
+
 var welcomeMessage = ['Welcome to the Smart Mirror UI, ' + name + '.'];
 var goodbyeMessage = ['See you later, ' + name + '.'];
 var goodnightMessage = ['Goodnight, ' + name + '.'];
