@@ -1,5 +1,5 @@
 //All this maybe put into a json file at some point as to have it work with the backend api stuff.
-
+//Change to config.js and add the APPID for the openweathermap API.
 //Language
 var lang = 'en';
 
