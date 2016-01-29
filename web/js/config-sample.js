@@ -23,9 +23,9 @@ var welcomeMessage = ['Welcome to the Smart Mirror UI, ' + name + '.'];
 var goodbyeMessage = ['See you later, ' + name + '.'];
 var goodnightMessage = ['Goodnight, ' + name + '.'];
 
-var morning = [ 'Good morning, ' + name + '.', 'Here\'s to a good day!', 'Did you sleep well?', 'Your name is ' + name + ', right?'];
+var morning = [ 'Good morning, ' + name + '.', 'Here\'s to a good day!', 'Did you sleep well?'];
 
-var afternoon = ['Hello, ' + name + '.', 'Having a good day?', 'It\'s the afternoon!'];
+var afternoon = ['Hello, ' + name + '.\n Is it me you\'re looking for?', 'Having a good day?', 'It\'s the afternoon!'];
 
 var evening = ['Good evening, ' + name + '.'];
 
