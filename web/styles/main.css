@@ -1,0 +1,149 @@
+body, html{
+	background-color:#000000;
+	color:#FFFFFF;
+	height:99%;
+	width:99.5%;
+
+	font-family:"HelveticaNeue-Light";
+	font-size: 35px;
+	line-height: 50px;
+}
+
+.wi {
+	line-height:75px;
+}
+
+.top {
+	position:absolute;
+	top:40px;
+}
+
+.left {
+	position: absolute;
+	left:40px;
+}
+
+.right {
+	position:absolute;
+	right:40px;
+	text-align: right;
+}
+
+.bottom {
+	position: absolute;
+	bottom:40px;
+}
+
+.centre-ver {
+	position:absolute;
+	top:50%;
+	height:200px;
+	margin-top:-100px;
+	line-height:100px;
+}
+
+.centre-hor {
+	position: absolute;
+	right:50px;
+	left:50px;
+	text-align:center;
+}
+
+.lower-third
+{
+	position:absolute;
+	top:66.666%;
+	height:200px;
+	margin-top: -100px;
+	line-height: 100px;
+}
+
+.light {
+	font-family:"HelveticaNeue-UltraLight";
+}
+
+.small
+{
+	font-size: 30px;
+	letter-spacing: 0px;
+	font-family: "HelveticaNeue-UltraLight";
+}
+
+.xsmall
+{
+	font-size:25px;
+	letter-spacing:0px;
+	line-height: 35px;
+	font-family: "HelveticaNeue-UltraLight";
+}
+
+.xxsmall
+{
+	font-size: 7.5px;
+	letter-spacing: 0px;
+	font-family: "HelveticaNeue-UltraLight";
+}
+
+.xxdimmed{
+	color:#333;
+}
+
+.xdimmed{
+	color:#666;
+}
+
+.dimmed{
+	color:#aaa;
+}
+
+.time .sec {
+	font-size: 25px;
+	color: #666;
+	padding-left: 5px;
+	position:relative;
+	top: -7px;
+}
+
+.icon
+{
+	position: relative;
+	top: 10px;
+	display: inline-block;
+	font-size: 40px;
+	padding-right: 5px;
+	font-weight: 100;
+	margin-right: 10px;
+}
+
+.icon-small
+{
+	position:relative;
+	display: inline-block;
+	font-size: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: 100;
+}
+@font-face{
+	font-family: 'HelveticaNeue-UltraLight';
+	src: url('/font/HelveticaNeue-UltraLight.woff') format('woff');
+	src: url('/font/HelveticaNeue-UltraLight.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face{
+	font-family: 'HelveticaNeue-Light';
+	src: url('/font/HelveticaNeue-Light.woff') format('woff');
+	src: url('/font/HelveticaNeue-Light.ttf') format('truetype');
+	font-style: normal;
+	font-weight:200;
+}
+
+@font-face{
+	font-family: 'HelveticaNeue-Medium';
+	src: url('/font/HelveticaNeue-Medium.woff') format('woff');
+	src: url('/font/HelveticaNeue-Medium.ttf') format('truetype');
+	font-style: normal;
+	font-weight:400;
+}
